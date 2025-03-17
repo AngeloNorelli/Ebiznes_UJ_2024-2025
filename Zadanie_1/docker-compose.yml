@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: my_gradle_app
+    command: ["gradle", "run"]
+    volumes:
+      - .:/app
+    working_dir: /app
