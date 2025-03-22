@@ -17,8 +17,24 @@ Zadanie_1 <br>
 ├── [build.gradle](./build.gradle) <br>
 ├── [Dockerfile](./Dockerfile) <br>
 ├── [docker-compose.yml](./docker-compose.yml) <br>
-├── [README.md](./README.md) <br>
+├── README.md &nbsp; <- *ten właśnie plik* <br>
 └── src <br>
-&emsp;└── main <br>
-&emsp;&emsp;└── java <br>
-&emsp;&emsp;&emsp;└── [HelloWorld.java](./src/main/java/HelloWorld.java)
+&emsp;&emsp;└── main <br>
+&emsp;&emsp;&emsp;&emsp;└── java <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;└── [HelloWorld.java](./src/main/java/HelloWorld.java)
+
+## Uruchomienie
+
+1. **Stworzenie obrazu w Docker**
+    ```sh
+    docker-compose build
+    ```
+
+2. **Uruchomienie kontenera**
+    ```sh
+    docker-compose up
+    ```
+
+## Linki
+
+* [Obraz dockera](https://hub.docker.com/r/angelonorelli/zadanie_1-app)
