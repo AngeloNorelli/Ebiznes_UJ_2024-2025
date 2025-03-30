@@ -36,8 +36,10 @@ class CartController @Inject()(cc: ControllerComponents) extends AbstractControl
       cartItem => {
         cart.find(_.productId == cartItem.productId) match {
           case Some(existingItem) =>
-            existingItem.quantity += cartItem.quantity
-            Ok(Json.toJson(existingItem))
+            val updatedItem = existingItem.copy(quantity = existingItem.quantity + cartItem.quantity)
+            cart -= existingItem
+            cart += updatedItem
+            Ok(Json.toJson(updatedItem))
           case None =>
             cart += cartItem
             Created(Json.toJson(cartItem))
