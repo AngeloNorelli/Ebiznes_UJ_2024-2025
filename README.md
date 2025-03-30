@@ -8,6 +8,7 @@ To repozytorium zawiera wszystkie zadania wykonane na przedmiocie Ebiznes.
 ✅ 4.0 do powyższego należy dodać najnowszego Gradle’a oraz paczkę JDBC SQLite w ramach projektu na Gradle (build.gradle)<br>
 ✅ 4.5 stworzyć przykład typu HelloWorld oraz uruchomienie aplikacji przez CMD oraz gradle<br>
 ✅ 5.0 dodać konfigurację docker-compose
+> Zadanie wykonałem przed 24.03 i dopisuję, że moim zdaniem oddałem je na 5
 
 * [Kod](/Zadanie_1/)
 * [Obraz dockera](https://hub.docker.com/r/angelonorelli/zadanie_1-app)
