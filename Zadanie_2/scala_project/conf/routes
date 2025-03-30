@@ -15,3 +15,17 @@ GET     /products/:id               controllers.ProductController.getById(id: Lo
 POST    /products                   controllers.ProductController.add
 PUT     /products/:id               controllers.ProductController.update(id: Long)
 DELETE  /products/:id               controllers.ProductController.delete(id: Long)
+
+# CategoryController
+GET     /categories                 controllers.CategoryController.getAll
+GET     /categories/:id             controllers.CategoryController.getById(id: Long)
+POST    /categories                 controllers.CategoryController.add
+PUT     /categories/:id             controllers.CategoryController.update(id: Long)
+DELETE  /categories/:id             controllers.CategoryController.delete(id: Long)
+
+# CartController
+GET     /cart                       controllers.CartController.getAll
+GET     /cart/:productId            controllers.CartController.getById(productId: Long)
+POST    /cart                       controllers.CartController.add
+PUT     /cart/:productId            controllers.CartController.update(productId: Long)
+DELETE  /cart/:productId            controllers.CartController.delete(productId: Long)
