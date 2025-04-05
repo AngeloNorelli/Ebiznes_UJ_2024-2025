@@ -17,6 +17,19 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonPrimitive
 
+private val categories = listOf(
+  "General",
+  "Development",
+  "Gaming",
+  "Music",
+  "Art",
+  "Science",
+  "Sports",
+  "Movies",
+  "Books",
+  "Food"
+)
+
 class DiscordClient(private val webhookUrl: String, private val token: String, private val botId: String) {
   private val client = HttpClient {
     install(WebSockets)
@@ -97,6 +110,14 @@ class DiscordClient(private val webhookUrl: String, private val token: String, p
             val timestamp = messageData?.get("timestamp")?.jsonPrimitive?.content ?: "Unknown"
 
             println("[$timestamp] [$channelId] $nick: $content")
+            val cleanedContent = content.replace(Regex("<@!?$botId>"), "").trim()
+            println("Cleaned content: $cleanedContent")
+
+            if(cleanedContent == "/category") {
+              println("User requested categories")
+              val categoriesList = categories.joinToString(separator = "\n") { "- $it" }
+              sendMessage("Available categories:\n$categoriesList")
+            }
           }
         }
       }
@@ -109,6 +130,20 @@ class DiscordClient(private val webhookUrl: String, private val token: String, p
       send(Frame.Text("""{"op":1,"d":null}"""))
       delay(interval)
     }
+  }
+
+  private suspend fun sendMessage(channelId: String, content: String, session: DefaultClientWebSocketSession) {
+    val payload = """
+      {
+        "op": 0,
+        "d": {
+          "channel_id": "$channelId",
+          "content": "$content"
+        }
+      }
+    """.trimIndent()
+
+    session.send(Frame.Text(payload))
   }
 }
 
