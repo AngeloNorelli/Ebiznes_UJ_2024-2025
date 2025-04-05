@@ -17,17 +17,17 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonPrimitive
 
-private val categories = listOf(
-  "General",
-  "Development",
-  "Gaming",
-  "Music",
-  "Art",
-  "Science",
-  "Sports",
-  "Movies",
-  "Books",
-  "Food"
+private val categoriesWithProducts = mapOf(
+  "General" to listOf("Items", "Tools", "Miscellaneous"),
+  "Development" to listOf("Programming", "Web Development", "Mobile Development"),
+  "Gaming" to listOf("PC", "Console", "Mobile"),
+  "Music" to listOf("Genres", "Artists", "Albums"),
+  "Art" to listOf("Painting", "Sculpture", "Photography"),
+  "Science" to listOf("Physics", "Chemistry", "Biology"),
+  "Sports" to listOf("Football", "Basketball", "Tennis"),
+  "Movies" to listOf("Genres", "Actors", "Directors"),
+  "Books" to listOf("Fiction", "Non-Fiction", "Comics"),
+  "Food" to listOf("Recipes", "Cuisines", "Ingredients")
 )
 
 class DiscordClient(private val webhookUrl: String, private val token: String, private val botId: String) {
@@ -115,8 +115,19 @@ class DiscordClient(private val webhookUrl: String, private val token: String, p
 
             if(cleanedContent == "/category") {
               println("User requested categories")
-              val categoriesList = categories.joinToString(separator = "\n") { "- $it" }
+              val categoriesList = categoriesWithProducts.keys.joinToString(separator = "\n") { "- $it" }
               sendMessage("Available categories:\n$categoriesList")
+            } else if(cleanedContent.startsWith("/products", ignoreCase = true)) {
+              val category = cleanedContent.substringAfter("/products").trim()
+              val products = categoriesWithProducts[category]
+              if(products != null) {
+                val productsList = products.joinToString(separator = "\n") { "- $it" }
+                sendMessage("Available products in $category:\n$productsList")
+              } else {
+                sendMessage("No products found for category: $category")
+              }
+            } else {
+              println("User message: $cleanedContent")
             }
           }
         }
