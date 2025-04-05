@@ -32,7 +32,7 @@ która pozwala na przesyłanie wiadomości na platformę Discord](https://github
 ✅ 3.5 [Aplikacja jest w stanie odbierać wiadomości użytkowników z
 platformy Discord skierowane do aplikacji (bota)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d8fe699e9b4882d59e27363ac34fbfabb8ddcadb)<br>
 ✅ 4.0 [Zwróci listę kategorii na określone żądanie użytkownika](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/65428b8b3028522a529c1468190d5ea4a612bdd5)<br>
-❌ 4.5 [Zwróci listę produktów wg żądanej kategorii](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+✅ 4.5 [Zwróci listę produktów wg żądanej kategorii](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/8ed9ac0456879624b60e32447c5eedd919609f0c)<br>
 ❌ 5.0 [Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger,
 Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 
