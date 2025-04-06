@@ -38,7 +38,7 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 
 * [Kod](./Zadanie_3/ktor-discord-client/)
 * [Nagranie](./Zadanie_3/zadanie_3-nagranie.mp4)<br>
-<video controls width="630" height="300" src="https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/raw/refs/heads/main/Zadanie_3/zadanie_3-nagranie.mp4" allowfullscreen></video>
+<video controls width="630" height="300" src="https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/raw/refs/heads/main/Zadanie_3/zadanie_3-nagranie-przyspieszone.mp4" allowfullscreen></video>
 
 ### [Zadanie 4]
 ❌ 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie
