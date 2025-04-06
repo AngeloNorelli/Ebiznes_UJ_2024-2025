@@ -38,7 +38,7 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 
 * [Kod](./Zadanie_3/ktor-discord-client/)
 * [Nagranie](./Zadanie_3/zadanie_3-nagranie.mp4)<br>
-<video height="100px" width=auto src="https://github.com/user-attachments/assets/bcec2786-374d-4753-a957-ec6c27d1b53f">
+<video height="300px" width=auto src="https://github.com/user-attachments/assets/bcec2786-374d-4753-a957-ec6c27d1b53f"></video>
 
 
 ### [Zadanie 4]
