@@ -36,6 +36,8 @@ platformy Discord skierowane do aplikacji (bota)](https://github.com/angelonorel
 ❌ 5.0 [Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger,
 Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 
+* [Kod](./Zadanie_3/ktor-discord-client/)
+
 ### [Zadanie 4]
 ❌ 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie
 miała kontroler Produktów zgodny z CRUD<br>
