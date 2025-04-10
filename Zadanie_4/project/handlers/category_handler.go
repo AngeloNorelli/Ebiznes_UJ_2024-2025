@@ -40,6 +40,19 @@ func AddProductToCategory(c echo.Context) error {
 		return c.JSON(http.StatusNotFound, map[string]string{"message": "Category not found"})
 	}
 
+	productID := c.QueryParam("product_id")
+	if productID != "" {
+		var product models.Product
+		if err := database.DB.First(&product, productID).Error; err != nil {
+			return c.JSON(http.StatusNotFound, map[string]string{"message": "Product not found"})
+		}
+
+		product.CategoryID = category.ID
+		if err := database.DB.Save(&product).Error; err != nil {
+			return c.JSON(http.StatusBadRequest, map[string]string{"message": "Failed to update product category"})
+		}
+	}
+
 	product := new(models.Product)
 	if err := c.Bind(product); err != nil {
 		return c.JSON(http.StatusBadRequest, err)
