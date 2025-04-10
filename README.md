@@ -51,4 +51,5 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 
 * [Kod](./Zadanie_4/project/)
 * [Nagranie](./Zadanie_4/zadanie_4-nagranie.mp4)
-<video height="300px" width=auto src=""></video>
+<video height="300px" width=auto src="https://github.com/user-attachments/assets/009c64a8-3422-4261-a940-445052e473aa"></video>
+
