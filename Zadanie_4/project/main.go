@@ -23,5 +23,11 @@ func main() {
 	e.POST("/carts/:id/products", handlers.AddProductToCart)
 	e.PUT("/carts/:id/items/:item_id", handlers.UpdateCartItem)
 
+	e.POST("/categories", handlers.CreateCategory)
+	e.GET("/categories", handlers.GetCategories)
+	e.GET("/categories/:id", handlers.GetCategoryByID)
+	e.POST("/categories/:id/products", handlers.AddProductToCategory)
+	e.DELETE("/categories/:id/products/:product_id", handlers.RemoveProductFromCategory)
+
 	e.Logger.Fatal(e.Start(":8080"))
 }
