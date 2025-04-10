@@ -17,6 +17,7 @@ func main() {
 	e.GET("/products/:id", handlers.GetProductByID)
 	e.PUT("/products/:id", handlers.UpdateProduct)
 	e.DELETE("/products/:id", handlers.DeleteProduct)
+	e.GET("/products/filtered", handlers.GetFilteredProducts)
 
 	e.POST("/carts", handlers.CreateCart)
 	e.GET("/carts/:id", handlers.GetCartByID)
