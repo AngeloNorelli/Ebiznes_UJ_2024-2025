@@ -42,12 +42,13 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 
 
 ### [Zadanie 4]
-❌ 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie
-miała kontroler Produktów zgodny z CRUD<br>
-❌ 3.5 Należy stworzyć model Produktów wykorzystując gorm oraz
-wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast
-listy)<br>
-❌ 4.0 Należy dodać model Koszyka oraz dodać odpowiedni endpoint<br>
-❌ 4.5 Należy stworzyć model kategorii i dodać relację między kategorią,
-a produktem<br>
-❌ 5.0 pogrupować zapytania w gorm’owe scope'y<br>
+✅ 3.0 [Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/6f31de476c65d208aa0dbd7d9de5560bfb46a189)<br>
+✅ 3.5 [Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/6f31de476c65d208aa0dbd7d9de5560bfb46a189)<br>
+✅ 4.0 [Należy dodać model Koszyka oraz dodać odpowiedni endpoint](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/57ee64ed46c6938e695651f5736e974e17f362b6)<br>
+✅ 4.5 [Należy stworzyć model kategorii i dodać relację między kategorią, a produktem](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/f89e9db40ae7f60035afd630dc9f1cdc87615062)<br>
+✅ 5.0 [pogrupować zapytania w gorm’owe scope'y](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/3b60e9e697eb8b6684b9e4818d451e19d47abbf2)<br>
+> Do endpointu dodającego produkt do kategorii dodałem jeszcze możliwość dodania istniejącego produktu do konkretnej kategorii - [commit](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/0eebc697a9870e73578e6ee5eda03f8da8272a83)
+
+* [Kod](./Zadanie_4/project/)
+* [Nagranie](./Zadanie_4/zadanie_4-nagranie.mp4)
+<video height="300px" width=auto src=""></video>
