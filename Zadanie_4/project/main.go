@@ -5,12 +5,18 @@ import (
 	"project/handlers"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
 	database.InitDatabase()
 
 	e := echo.New()
+
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"},
+		AllowMethods: []string{echo.GET, echo.POST, echo.PUT, echo.DELETE},
+	}))
 
 	e.POST("/products", handlers.CreateProduct)
 	e.GET("/products", handlers.GetProducts)
@@ -29,6 +35,9 @@ func main() {
 	e.GET("/categories/:id", handlers.GetCategoryByID)
 	e.POST("/categories/:id/products", handlers.AddProductToCategory)
 	e.DELETE("/categories/:id/products/:product_id", handlers.RemoveProductFromCategory)
+
+	e.POST("/payments", handlers.CreatePayment)
+	e.GET("/payments", handlers.GetPayments)
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
