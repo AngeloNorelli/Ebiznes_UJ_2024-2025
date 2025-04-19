@@ -53,3 +53,18 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 * [Nagranie](./Zadanie_4/zadanie_4-nagranie.mp4)
 <video height="300px" width=auto src="https://github.com/user-attachments/assets/009c64a8-3422-4261-a940-445052e473aa"></video>
 
+### Zadanie 5 Frontend
+Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js.
+W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk
+oraz Płatności. Koszyk oraz Płatności powinny wysyłać do aplikacji
+serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach
+z aplikacji serwerowej. Aplikacja serwera w jednym z trzech języków:
+Kotlin, Scala, Go. Dane pomiędzy wszystkimi komponentami powinny być
+przesyłane za pomocą React hooks.
+
+✅ 3.0 [W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej;](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/59b27e0aec27e65f3bb7cf5ec10244222a4d4276)<br>
+✅ 3.5 [Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2f1c1f495c96d88140b53a47e9af2d88eacde626)<br>
+✅ 4.0 [Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/25d7e21dbed6b12dd5a4a5af39d3e2d7ea9e8e46)<br>
+> Nieświadomie zrobiłem cześć tego w commicie na ocenę 3.5
+❌ 4.5 [Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+❌ 5.0 [Należy wykorzystać axios’a oraz dodać nagłówki pod CORS](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
