@@ -11,15 +11,27 @@ const Cart = () => {
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <ul>
-          {cart.map((item) => (
-            <li key={item.product.id}>
-              {item.product.name} - {item.product.price} PLN x {item.quantity}
-              <button onClick={() => decreaseQuantity(item.product.id)}>-</button>
-              <button onClick={() => removeFromCart(item.product.id)}>Remove</button>
-            </li>
-          ))}
-        </ul>
+        <div className="CartList">
+          <div className="ColumnsNames">
+            <div>Name</div>
+            <div>Price</div>
+            <div>Quantity</div>
+            <div>Actions</div>
+          </div>
+          <ul>
+            {cart.map((item) => (
+              <li key={item.product.id}>
+                <div>{item.product.name}</div> 
+                <div>{item.product.price} PLN</div> 
+                <div>x {item.quantity}</div>
+                <div className="Actions">
+                  <button onClick={() => decreaseQuantity(item.product.id)}>-</button>
+                  <button onClick={() => removeFromCart(item.product.id)}>Remove</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );
