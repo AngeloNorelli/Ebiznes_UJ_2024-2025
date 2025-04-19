@@ -1,4 +1,4 @@
-.ProductsList {
+.Products {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,9 +6,18 @@
 }
 
 .ProductsList ul {
-  width: 20vw;
+  align-items: center;
+  padding-inline-start: 0;
+  width: 40vw;
 }
 
-.ProductsList button{
-  margin-left: 5%;
+.ProductsList li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ColumnsNames {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }

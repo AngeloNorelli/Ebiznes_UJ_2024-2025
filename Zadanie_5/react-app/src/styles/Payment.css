@@ -1,0 +1,8 @@
+.Payment {
+  width: 100%;
+}
+
+.Payment select {
+  margin-left: 5%;
+  margin-right: 5%;
+}

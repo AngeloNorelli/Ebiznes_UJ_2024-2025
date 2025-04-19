@@ -6,9 +6,26 @@
 }
 
 .Cart ul {
-  width: 20vw;
+  padding-inline-start: 0;
 }
 
-.Cart button{
-  margin-left: 5%;
+.Cart li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CartList {
+  width: 40vw;
+}
+
+.ColumnsNames {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.Actions {
+  display: flex;
+  min-width: 10vw;
+  justify-content: space-between;
 }
