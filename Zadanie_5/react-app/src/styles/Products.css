@@ -1,0 +1,14 @@
+.ProductsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ProductsList ul {
+  width: 20vw;
+}
+
+.ProductsList button{
+  margin-left: 5%;
+}

@@ -1,0 +1,14 @@
+.Cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Cart ul {
+  width: 20vw;
+}
+
+.Cart button{
+  margin-left: 5%;
+}
