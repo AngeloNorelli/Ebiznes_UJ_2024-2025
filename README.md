@@ -72,3 +72,6 @@ przesyłane za pomocą React hooks.
 > Przy próbie nagrania demo zobaczyłem, że pomyliłem się z identyfikatorem produktów, zamiast product.ID miałem wszędzie product.id i poprawiłem to w [tym commicie](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/46204f2c45064cb92143bb9a503ea147c100cfb5)
 
 * [Kod](./Zadanie_5/react-app/)
+* [Nagranie](./Zadanie_5/zadanie_5-nagranie.mp4)
+<video height="300px" width=aut src="https://github.com/user-attachments/assets/b650058c-a844-45ef-90b8-07ae1eace486"></video>
+
