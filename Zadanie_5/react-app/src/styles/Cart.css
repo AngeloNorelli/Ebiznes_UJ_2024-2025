@@ -12,6 +12,7 @@
 .Cart li {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .CartList {
@@ -26,6 +27,8 @@
 
 .Actions {
   display: flex;
-  min-width: 10vw;
-  justify-content: space-between;
+}
+
+.Actions button:first-child{
+  margin-right: 0.5rem;
 }

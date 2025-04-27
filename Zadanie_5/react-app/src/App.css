@@ -39,3 +39,49 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  background-color: #434040;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #61dafb;
+}
+
+nav a:active {
+  color: #ff6347;
+}
+
+button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+button:active {
+  background-color: #0f87ff;
+  color: #ff6347;
+}
