@@ -41,7 +41,7 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 <video height="300px" width=auto src="https://github.com/user-attachments/assets/bcec2786-374d-4753-a957-ec6c27d1b53f"></video>
 
 
-### [Zadanie 4]
+### [Zadanie 4](./Zadanie_4/)
 ✅ 3.0 [Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/6f31de476c65d208aa0dbd7d9de5560bfb46a189)<br>
 ✅ 3.5 [Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/6f31de476c65d208aa0dbd7d9de5560bfb46a189)<br>
 ✅ 4.0 [Należy dodać model Koszyka oraz dodać odpowiedni endpoint](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/57ee64ed46c6938e695651f5736e974e17f362b6)<br>
@@ -53,7 +53,7 @@ Webex](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/).<br>
 * [Nagranie](./Zadanie_4/zadanie_4-nagranie.mp4)
 <video height="300px" width=auto src="https://github.com/user-attachments/assets/009c64a8-3422-4261-a940-445052e473aa"></video>
 
-### Zadanie 5 Frontend
+### [Zadanie 5 Frontend](./Zadanie_5/)
 Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js.
 W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk
 oraz Płatności. Koszyk oraz Płatności powinny wysyłać do aplikacji
@@ -66,5 +66,9 @@ przesyłane za pomocą React hooks.
 ✅ 3.5 [Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2f1c1f495c96d88140b53a47e9af2d88eacde626)<br>
 ✅ 4.0 [Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/25d7e21dbed6b12dd5a4a5af39d3e2d7ea9e8e46)<br>
 > Nieświadomie zrobiłem cześć tego w commicie na ocenę 3.5
+
 ❌ 4.5 [Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
 ❌ 5.0 [Należy wykorzystać axios’a oraz dodać nagłówki pod CORS](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+> Przy próbie nagrania demo zobaczyłem, że pomyliłem się z identyfikatorem produktów, zamiast product.ID miałem wszędzie product.id i poprawiłem to w [tym commicie](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/46204f2c45064cb92143bb9a503ea147c100cfb5)
+
+* [Kod](./Zadanie_5/react-app/)
