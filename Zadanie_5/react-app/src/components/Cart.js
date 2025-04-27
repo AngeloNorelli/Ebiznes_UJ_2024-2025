@@ -20,13 +20,13 @@ const Cart = () => {
           </div>
           <ul>
             {cart.map((item) => (
-              <li key={item.product.id}>
+              <li key={item.product.ID}>
                 <div>{item.product.name}</div> 
                 <div>{item.product.price} PLN</div> 
                 <div>x {item.quantity}</div>
                 <div className="Actions">
-                  <button onClick={() => decreaseQuantity(item.product.id)}>-</button>
-                  <button onClick={() => removeFromCart(item.product.id)}>Remove</button>
+                  <button onClick={() => decreaseQuantity(item.product.ID)}>-</button>
+                  <button onClick={() => removeFromCart(item.product.ID)}>Remove</button>
                 </div>
               </li>
             ))}
