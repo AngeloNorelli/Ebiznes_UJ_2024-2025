@@ -90,3 +90,7 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 ❌ 4.0 [Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
 ❌ 4.5 [Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
 ❌ 5.0 [Należy uruchomić testy funkcjonalne na Browserstacku](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+
+* [Kod](./Zadanie_4/project/cypress)
+<video height="300px" width=aut src="https://github.com/user-attachments/assets/8fdb09f4-4c17-4aff-abec-f8d330f8e092"></video>
+
