@@ -13,10 +13,15 @@ val webhookUrl = properties.getProperty("discord.webhook.url")
 val token = properties.getProperty("discord.token")
   ?: throw IllegalStateException("Token not found in config.properties")
 
+val botId = properties.getProperty("discord.botId")
+  ?: throw IllegalStateException("Bot ID not found in config.properties")
+
 fun main() {
-  val discordClient = DiscordClient(token)
+  val discordClient = DiscordClient(webhookUrl, token, botId)
 
   runBlocking {
+    val response = discordClient.sendMessage("Hello from Ktor Discord Client!")
+    println("Message sent with status: ${response.status}")
     discordClient.connectToGateway()
   }
 }
