@@ -9,6 +9,8 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+const noProductError = "Product not found"
+
 func CreateProduct(c echo.Context) error {
 	product := new(models.Product)
 	if err := c.Bind(product); err != nil {
@@ -30,7 +32,7 @@ func GetProductByID(c echo.Context) error {
 	var product models.Product
 
 	if err := database.DB.First(&product, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Product not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noProductError})
 	}
 	return c.JSON(http.StatusOK, product)
 }
@@ -40,7 +42,7 @@ func UpdateProduct(c echo.Context) error {
 	var product models.Product
 
 	if err := database.DB.First(&product, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Product not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noProductError})
 	}
 
 	if err := c.Bind(&product); err != nil {
@@ -56,7 +58,7 @@ func DeleteProduct(c echo.Context) error {
 	var product models.Product
 
 	if err := database.DB.First(&product, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Product not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noProductError})
 	}
 
 	database.DB.Delete(&product)

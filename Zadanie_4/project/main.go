@@ -8,6 +8,8 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
+const productIdEndpoint = "/products/:id"
+
 func main() {
 	database.InitDatabase()
 
@@ -20,9 +22,9 @@ func main() {
 
 	e.POST("/products", handlers.CreateProduct)
 	e.GET("/products", handlers.GetProducts)
-	e.GET("/products/:id", handlers.GetProductByID)
-	e.PUT("/products/:id", handlers.UpdateProduct)
-	e.DELETE("/products/:id", handlers.DeleteProduct)
+	e.GET(productIdEndpoint, handlers.GetProductByID)
+	e.PUT(productIdEndpoint, handlers.UpdateProduct)
+	e.DELETE(productIdEndpoint, handlers.DeleteProduct)
 	e.GET("/products/filtered", handlers.GetFilteredProducts)
 
 	e.POST("/carts", handlers.CreateCart)

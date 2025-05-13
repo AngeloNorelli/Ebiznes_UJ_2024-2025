@@ -8,6 +8,8 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+const noCartError = "Cart not found"
+
 func CreateCart(c echo.Context) error {
 	cart := new(models.Cart)
 
@@ -24,7 +26,7 @@ func AddProductToCart(c echo.Context) error {
 	var cart models.Cart
 
 	if err := database.DB.First(&cart, cartID).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Cart not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noCartError})
 	}
 
 	item := new(models.CartItem)
@@ -51,7 +53,7 @@ func GetCartByID(c echo.Context) error {
 	var cart models.Cart
 
 	if err := database.DB.Preload("Items").Preload("Items.Product").First(&cart, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Cart not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noCartError})
 	}
 
 	return c.JSON(http.StatusOK, cart)
@@ -62,7 +64,7 @@ func UpdateCartItem(c echo.Context) error {
 	var cart models.Cart
 
 	if err := database.DB.First(&cart, cartID).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Cart not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noCartError})
 	}
 
 	itemID := c.Param("item_id")

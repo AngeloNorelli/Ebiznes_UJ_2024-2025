@@ -8,6 +8,8 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+const noCategoryError = "Category not found"
+
 func CreateCategory(c echo.Context) error {
 	category := new(models.Category)
 	if err := c.Bind(category); err != nil {
@@ -28,7 +30,7 @@ func GetCategoryByID(c echo.Context) error {
 	id := c.Param("id")
 	var category models.Category
 	if err := database.DB.Preload("Products").First(&category, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Category not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noCategoryError})
 	}
 	return c.JSON(http.StatusOK, category)
 }
@@ -37,7 +39,7 @@ func AddProductToCategory(c echo.Context) error {
 	categoryID := c.Param("id")
 	var category models.Category
 	if err := database.DB.First(&category, categoryID).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Category not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noCategoryError})
 	}
 
 	productID := c.QueryParam("product_id")
@@ -73,7 +75,7 @@ func RemoveProductFromCategory(c echo.Context) error {
 
 	var category models.Category
 	if err := database.DB.First(&category, categoryID).Error; err != nil {
-		return c.JSON(http.StatusNotFound, map[string]string{"message": "Category not found"})
+		return c.JSON(http.StatusNotFound, map[string]string{"message": noCategoryError})
 	}
 
 	var product models.Product
