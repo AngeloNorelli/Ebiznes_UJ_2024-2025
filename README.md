@@ -94,3 +94,10 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 * [Kod](./Zadanie_4/project/cypress)
 <video height="300px" width=aut src="https://github.com/user-attachments/assets/8fdb09f4-4c17-4aff-abec-f8d330f8e092"></video>
 
+### [Zadanie 7 - Sonar]
+
+✅ 3.0 [Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/48a95a65fb6d4fcfa6ca7fceb0f94a6b52d02ce6)
+✅ 3.5 [Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
+✅ 4.0 [Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
+✅ 4.5 [Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
+✅ 5.0 [Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckie](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/725ff62483c679cd20678c7287b2f6bd944e20f1)
