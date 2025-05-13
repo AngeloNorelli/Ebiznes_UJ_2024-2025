@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Go project",
+  "main": "main.go",
+  "scripts": {
+    "start:main": "go run main.go",
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "author": "Angelo Norelli",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.3.3"
+  }
+}
