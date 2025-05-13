@@ -33,8 +33,8 @@ const Payment = () => {
       <h1>Payment</h1>
       <p>Total Cost: {getTotalCost()} PLN</p>
       <label>
-        Payment Method:
-        <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
+        Payment Method:{' '}
+        <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)} >
           <option value="creditCard">Credit Card</option>
           <option value="paypal">PayPal</option>
           <option value="bankTransfer">Bank Transfer</option>

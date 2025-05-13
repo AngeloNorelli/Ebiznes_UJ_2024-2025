@@ -1,8 +1,12 @@
 import React, { createContext, useContext, useState } from "react";
+import PropTypes from "prop-types";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+CartProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
@@ -45,15 +49,17 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
   };
 
+  const value = React.useMemo(() => ({
+    cart, 
+    addToCart, 
+    removeFromCart, 
+    decreaseQuantity, 
+    clearCart,
+    getTotalCost
+  }), [cart]);
+
   return (
-    <CartContext.Provider value={{ 
-      cart, 
-      addToCart, 
-      removeFromCart, 
-      decreaseQuantity, 
-      clearCart,
-      getTotalCost
-    }}>
+    <CartContext.Provider value={value}>
       {children}
     </CartContext.Provider>
   );
