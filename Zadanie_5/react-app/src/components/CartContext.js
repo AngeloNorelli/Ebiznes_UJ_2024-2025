@@ -45,9 +45,9 @@ CartProvider.propTypes = {
     setCart([]);
   };
 
-  const getTotalCost = () => {
+  const getTotalCost = React.useCallback(() => {
     return cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
-  };
+  }, [cart]);
 
   const value = React.useMemo(() => ({
     cart, 
@@ -56,7 +56,7 @@ CartProvider.propTypes = {
     decreaseQuantity, 
     clearCart,
     getTotalCost
-  }), [cart]);
+  }), [cart, getTotalCost]);
 
   return (
     <CartContext.Provider value={value}>
