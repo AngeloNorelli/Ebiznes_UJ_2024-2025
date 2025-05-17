@@ -101,3 +101,15 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 ✅ 4.0 [Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
 ✅ 4.5 [Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
 ✅ 5.0 [Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckie](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/725ff62483c679cd20678c7287b2f6bd944e20f1)
+
+### [Zadanie 8 - Oauth2]
+
+Należy skonfigurować klienta Oauth2 (4.0). Dane o użytkowniku wraz z tokenem powinny być przechowywane po stronie bazy serwera, a nowy token (inny niż ten od dostawcy) powinien zostać wysłany do klienta (React). Można zastosować mechanizm sesji lub inny dowolny (5.0). Zabronione jest tworzenie klientów bezpośrednio po stronie React'a wyłączając z komunikacji aplikację serwerową, np. wykorzystując auth0.
+
+Prawidłowa komunikacja: react-sewer-dostawca-serwer(via return uri)-react.
+
+❌ 3.0 [logowanie przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 3.5 [rejestracja przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 4.0 [logowanie via Google OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 4.5 [logowanie via Facebook lub Github OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 5.0 [zapisywanie danych logowania OAuth2 po stronie serwera](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
