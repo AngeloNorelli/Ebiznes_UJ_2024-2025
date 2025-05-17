@@ -110,4 +110,5 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 ✅ 4.5 [logowanie via Facebook lub Github OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)
 ❓ 5.0 zapisywanie danych logowania OAuth2 po stronie serwera - [Oauth Google](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/520a90d5587f54e6a3d3828c289d0f74585d2e60) i [OAuth Github](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)
 
-<video height="300px" width=aut src=""></video>
+<video height="300px" width=aut src="https://github.com/user-attachments/assets/b8df347b-4307-4336-8812-39d15c8f57af"></video>
+
