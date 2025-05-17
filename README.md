@@ -104,12 +104,10 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 
 ### [Zadanie 8 - Oauth2]
 
-Należy skonfigurować klienta Oauth2 (4.0). Dane o użytkowniku wraz z tokenem powinny być przechowywane po stronie bazy serwera, a nowy token (inny niż ten od dostawcy) powinien zostać wysłany do klienta (React). Można zastosować mechanizm sesji lub inny dowolny (5.0). Zabronione jest tworzenie klientów bezpośrednio po stronie React'a wyłączając z komunikacji aplikację serwerową, np. wykorzystując auth0.
+✅ 3.0 [logowanie przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/ab0bd29e9b0b851e186d27ad7dade6c3647083ee)
+✅ 3.5 [rejestracja przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/576f703818607e223809e01a0dbdbcda25d08e5b)
+✅ 4.0 [logowanie via Google OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/520a90d5587f54e6a3d3828c289d0f74585d2e60)
+✅ 4.5 [logowanie via Facebook lub Github OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)
+❓ 5.0 zapisywanie danych logowania OAuth2 po stronie serwera - [Oauth Google](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/520a90d5587f54e6a3d3828c289d0f74585d2e60) i [OAuth Github](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)
 
-Prawidłowa komunikacja: react-sewer-dostawca-serwer(via return uri)-react.
-
-❌ 3.0 [logowanie przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 3.5 [rejestracja przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 4.0 [logowanie via Google OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 4.5 [logowanie via Facebook lub Github OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 5.0 [zapisywanie danych logowania OAuth2 po stronie serwera](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+<video height="300px" width=aut src=""></video>
