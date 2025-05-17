@@ -54,6 +54,8 @@ func main() {
 
 	e.POST("/login", handlers.Login(db))
 	e.POST("/register", handlers.Register(db))
+	e.GET("/auth/google/login", handlers.GoogleLogin)
+	e.GET("/auth/google/callback", handlers.GoogleCallback)
 
 	e.Logger.Fatal(e.Start(":8080"))
 }

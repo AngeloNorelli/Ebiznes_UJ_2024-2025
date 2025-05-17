@@ -6,7 +6,8 @@ import Cart from './components/Cart';
 import Login from './components/Login';
 import Register from './components/Register';
 import { CartProvider } from './components/CartContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { FcGoogle } from 'react-icons/fc';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -22,6 +23,16 @@ function App() {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
   }
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    if (token) {
+      localStorage.setItem('token', token);
+      setIsLoggedIn(true);
+      window.history.replaceState({}, document.title, "/");
+    }
+  }, []);
 
   return (
     <CartProvider>
@@ -47,18 +58,26 @@ function App() {
             <div className="login-modal">
               {!showRegister ? (
                 <>
-                  Log in
+                  <p>Log in</p>
                   <Login onLogin={handleLogin} />
-                  Don't have an account?
+                  <p>Don't have an account?</p>
                   <button onClick={() => setShowRegister(true)}>
                     Register
                   </button>
-                  </>
+                  <p>Log in using other methods</p>
+                  <button
+                    className="google-login-btn"
+                    onClick={() => window.location.href = "http://localhost:8080/auth/google/login"}
+                    title='Log in with Google'
+                  >
+                    <FcGoogle size={24}/>
+                  </button>
+                </>
               ) : (
                 <>
-                  Register
+                  <p>Register</p>
                   <Register onRegister={() => { setShowLogin(true); }} />
-                  Already have an account?
+                  <p>Already have an account?</p>
                   <button onClick={() => setShowRegister(false)}>
                     Log in
                   </button>
