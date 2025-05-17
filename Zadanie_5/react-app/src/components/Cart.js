@@ -12,25 +12,29 @@ const Cart = () => {
         <p>Your cart is empty.</p>
       ) : (
         <div className="CartList">
-          <div className="ColumnsNames">
-            <div>Name</div>
-            <div>Price</div>
-            <div>Quantity</div>
-            <div>Actions</div>
-          </div>
-          <ul>
-            {cart.map((item) => (
-              <li key={item.product.ID}>
-                <div>{item.product.name}</div> 
-                <div>{item.product.price} PLN</div> 
-                <div>x {item.quantity}</div>
-                <div className="Actions">
-                  <button onClick={() => decreaseQuantity(item.product.ID)}>-</button>
-                  <button onClick={() => removeFromCart(item.product.ID)}>Remove</button>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <table className="CartTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((item) => (
+                <tr key={item.product.ID}>
+                  <td>{item.product.name}</td>
+                  <td>{item.product.price} PLN</td>
+                  <td>x {item.quantity}</td>
+                  <td className="Actions">
+                    <button onClick={() => decreaseQuantity(item.product.ID)}>-</button>
+                    <button onClick={() => removeFromCart(item.product.ID)}>Remove</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
     </div>

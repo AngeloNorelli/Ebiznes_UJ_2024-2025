@@ -17,20 +17,28 @@ const Products = () => {
     <div className="Products">
       <div className="ProductsList">
         <h1>Products</h1>
-        <div className="ColumnsNames">
-          <div>Name</div>
-          <div>Price</div>
-          <div>Quantity</div>
-          <div>Actions</div>
-        </div>
-        <ul>
-          {products.map((product) => (
-            <li key={product.ID}>
-              <div>{product.name}</div> <div>{product.price} PLN</div> <div>{product.stock}</div>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
-            </li>
-          ))}
-        </ul>
+        <table className="ProductsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product) => (
+              <tr key={product.ID}>
+                <td>{product.name}</td>
+                <td>{product.price} PLN</td>
+                <td>{product.stock}</td>
+                <td>
+                  <button onClick={() => addToCart(product)}>Add to Cart</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

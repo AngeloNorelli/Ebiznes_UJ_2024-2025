@@ -5,14 +5,9 @@
   width: 100%;
 }
 
-.Cart ul {
-  padding-inline-start: 0;
-}
-
-.Cart li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+.CartTable th, .CartTable td {
+  padding: 0.5rem 2rem;
+  text-align: left;
 }
 
 .CartList {

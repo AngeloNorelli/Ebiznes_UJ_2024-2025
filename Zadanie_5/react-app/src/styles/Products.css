@@ -5,20 +5,13 @@
   width: 100%;
 }
 
-.ProductsList ul {
-  align-items: center;
-  padding-inline-start: 0;
-  width: 40vw;
+.ProductsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
 
-.ProductsList li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.ColumnsNames {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
+.ProductsTable th, .ProductsTable td {
+  padding: 0.5rem 1rem;
+  text-align: left;
 }
