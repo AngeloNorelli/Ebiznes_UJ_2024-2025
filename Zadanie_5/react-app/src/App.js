@@ -4,11 +4,24 @@ import Products from './components/Products';
 import Payment from './components/Payment';
 import Cart from './components/Cart';
 import Login from './components/Login';
+import Register from './components/Register';
 import { CartProvider } from './components/CartContext';
 import { useState } from 'react';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setShowLogin(false);
+    setIsLoggedIn(true);
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+  }
 
   return (
     <CartProvider>
@@ -20,14 +33,37 @@ function App() {
               <Link to="/cart">Cart</Link> |
               <Link to="/payment">Payment</Link>
             </div>
-            <button onClick={() => setShowLogin((prev) => !prev)}>
-              {showLogin ? 'Close' : 'Log in'}
-            </button>
+            {!isLoggedIn ? (
+              <button onClick={() => {setShowLogin((prev) => !prev); setShowRegister(false);}}>
+                {showLogin ? 'Close' : 'Log in'}
+              </button>
+            ) : (
+              <button onClick={handleLogout}>
+                Log out
+              </button>
+            )}
           </nav>
           {showLogin && (
             <div className="login-modal">
-              Log in
-              <Login onLogin={() => setShowLogin(false)} />
+              {!showRegister ? (
+                <>
+                  Log in
+                  <Login onLogin={handleLogin} />
+                  Don't have an account?
+                  <button onClick={() => setShowRegister(true)}>
+                    Register
+                  </button>
+                  </>
+              ) : (
+                <>
+                  Register
+                  <Register onRegister={() => { setShowLogin(true); }} />
+                  Already have an account?
+                  <button onClick={() => setShowRegister(false)}>
+                    Log in
+                  </button>
+                </>
+              )}
             </div>
           )}
           <Routes>

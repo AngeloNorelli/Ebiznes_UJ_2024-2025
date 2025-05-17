@@ -14,24 +14,27 @@ type PaymentRequest struct {
 	Cart   []models.CartItem `json:"cart"`
 }
 
+func extractUserID(c echo.Context) uint {
+	user := c.Get("user")
+	if user != nil {
+		if token, ok := user.(*jwt.Token); ok {
+			if claims, ok := token.Claims.(jwt.MapClaims); ok {
+				if id, ok := claims["user_id"].(float64); ok {
+					return uint(id)
+				}
+			}
+		}
+	}
+	return 0
+}
+
 func CreatePayment(c echo.Context) error {
 	req := new(PaymentRequest)
 	if err := c.Bind(req); err != nil {
 		return c.JSON(http.StatusBadRequest, err)
 	}
 
-	var userID uint = 0
-
-	user := c.Get("user")
-	if user != nil {
-		if token, ok := user.(*jwt.Token); ok {
-			if claims, ok := token.Claims.(jwt.MapClaims); ok {
-				if id, ok := claims["user_id"].(float64); ok {
-					userID = uint(id)
-				}
-			}
-		}
-	}
+	userID := extractUserID(c)
 
 	cart := models.Cart{
 		UserID:    userID,

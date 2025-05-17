@@ -53,6 +53,7 @@ func main() {
 	e.GET("/payments", handlers.GetPayments)
 
 	e.POST("/login", handlers.Login(db))
+	e.POST("/register", handlers.Register(db))
 
 	e.Logger.Fatal(e.Start(":8080"))
 }

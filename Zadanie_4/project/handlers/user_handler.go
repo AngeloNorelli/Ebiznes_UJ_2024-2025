@@ -18,6 +18,11 @@ type LoginRequest struct {
 	Password string `json:"password"`
 }
 
+type RegisterRequest struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
 func Login(db *gorm.DB) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		var req LoginRequest
@@ -46,5 +51,37 @@ func Login(db *gorm.DB) echo.HandlerFunc {
 		}
 
 		return c.JSON(http.StatusOK, map[string]string{"token": tokenString})
+	}
+}
+
+func Register(db *gorm.DB) echo.HandlerFunc {
+	return func(c echo.Context) error {
+		var req RegisterRequest
+		if err := c.Bind(&req); err != nil {
+			return c.JSON(http.StatusBadRequest, map[string]string{"message": "Invalid request"})
+		}
+		if req.Username == "" || req.Password == "" {
+			return c.JSON(http.StatusBadRequest, map[string]string{"message": "Username and password are required"})
+		}
+
+		var existing models.User
+		if err := db.Where("username = ?", req.Username).First(&existing).Error; err == nil {
+			return c.JSON(http.StatusConflict, map[string]string{"message": "Username already exists"})
+		}
+
+		hashed, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)
+		if err != nil {
+			return c.JSON(http.StatusInternalServerError, map[string]string{"message": "Could not hash password"})
+		}
+
+		user := models.User{
+			Username:     req.Username,
+			PasswordHash: string(hashed),
+		}
+		if err := db.Create(&user).Error; err != nil {
+			return c.JSON(http.StatusInternalServerError, map[string]string{"message": "Could not create user"})
+		}
+
+		return c.JSON(http.StatusCreated, map[string]string{"message": "User registered successfully"})
 	}
 }

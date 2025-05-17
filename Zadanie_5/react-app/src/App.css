@@ -108,9 +108,18 @@ button:active {
   padding: 1rem;
   border: 1px solid #373535;
   color: white;
+  word-break: break-word;
+  width: 200px;
+  white-space: pre-line;
 }
 
 .login-modal .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-modal .register-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
