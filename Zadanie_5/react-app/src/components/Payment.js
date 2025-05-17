@@ -16,7 +16,17 @@ const Payment = () => {
       method: paymentMethod,
     };
 
-    axios.post("http://localhost:8080/payments", paymentPayload)
+    const token = localStorage.getItem("token");
+
+    axios.post(
+      "http://localhost:8080/payments",
+      paymentPayload,
+      {
+        headers: token ? {
+          Authorization: `Bearer ${token}`
+        } : {},
+      }
+    )
       .then((response) => {
         console.log("Payment successful:", response.data);
         alert("Payment successful!");

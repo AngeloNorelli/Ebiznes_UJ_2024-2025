@@ -5,6 +5,7 @@ import "gorm.io/gorm"
 type Cart struct {
 	gorm.Model
 	UserID    uint       `json:"user_id"`
+	User			User
 	Items     []CartItem `json:"items"`
 	TotalCost float64    `json:"total_cost"`
 }

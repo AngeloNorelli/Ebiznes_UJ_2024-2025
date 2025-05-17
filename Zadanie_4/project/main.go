@@ -3,15 +3,24 @@ package main
 import (
 	"project/database"
 	"project/handlers"
-
+	"log"
+	"os"
+	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	jwtMiddleware "github.com/labstack/echo-jwt/v4"
 )
 
 const productIdEndpoint = "/products/:id"
 
 func main() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	database.InitDatabase()
+	db := database.GetDB()
 
 	e := echo.New()
 
@@ -38,8 +47,12 @@ func main() {
 	e.POST("/categories/:id/products", handlers.AddProductToCategory)
 	e.DELETE("/categories/:id/products/:product_id", handlers.RemoveProductFromCategory)
 
-	e.POST("/payments", handlers.CreatePayment)
+	e.POST("/payments", handlers.CreatePayment, jwtMiddleware.WithConfig(jwtMiddleware.Config{
+		SigningKey: []byte(os.Getenv("JWT_SECRET_KEY")),
+	}))
 	e.GET("/payments", handlers.GetPayments)
+
+	e.POST("/login", handlers.Login(db))
 
 	e.Logger.Fatal(e.Start(":8080"))
 }

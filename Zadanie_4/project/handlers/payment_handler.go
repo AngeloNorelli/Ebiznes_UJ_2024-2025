@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"project/database"
 	"project/models"
-
+	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
 )
 
@@ -20,8 +20,21 @@ func CreatePayment(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, err)
 	}
 
+	var userID uint = 0
+
+	user := c.Get("user")
+	if user != nil {
+		if token, ok := user.(*jwt.Token); ok {
+			if claims, ok := token.Claims.(jwt.MapClaims); ok {
+				if id, ok := claims["user_id"].(float64); ok {
+					userID = uint(id)
+				}
+			}
+		}
+	}
+
 	cart := models.Cart{
-		UserID:    1,
+		UserID:    userID,
 		TotalCost: req.Amount,
 	}
 

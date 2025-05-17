@@ -16,8 +16,12 @@ func InitDatabase() {
 		panic("failed to connect database!")
 	}
 
-	err = DB.AutoMigrate(&models.Product{}, &models.Cart{}, &models.CartItem{}, &models.Category{}, &models.Payment{})
+	err = DB.AutoMigrate(&models.Product{}, &models.Cart{}, &models.CartItem{}, &models.Category{}, &models.Payment{}, &models.User{})
 	if err != nil {
 		panic("failed to migrate database: " + err.Error())
 	}
+}
+
+func GetDB() *gorm.DB {
+	return DB
 }
