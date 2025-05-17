@@ -8,6 +8,7 @@ import Register from './components/Register';
 import { CartProvider } from './components/CartContext';
 import { useEffect, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
+import { FaGithub } from 'react-icons/fa';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -65,13 +66,22 @@ function App() {
                     Register
                   </button>
                   <p>Log in using other methods</p>
-                  <button
-                    className="google-login-btn"
-                    onClick={() => window.location.href = "http://localhost:8080/auth/google/login"}
-                    title='Log in with Google'
-                  >
-                    <FcGoogle size={24}/>
-                  </button>
+                  <div className="login-methods">
+                    <button
+                      className="google-login-btn"
+                      onClick={() => window.location.href = "http://localhost:8080/auth/google/login"}
+                      title='Log in with Google'
+                    >
+                      <FcGoogle size={24}/>
+                    </button>
+                    <button
+                      className="github-login-btn"
+                      onClick={() => window.location.href = "http://localhost:8080/auth/github/login"}
+                      title='Log in with Github'
+                    >
+                      <FaGithub size={24}/>
+                    </button>
+                  </div>
                 </>
               ) : (
                 <>
