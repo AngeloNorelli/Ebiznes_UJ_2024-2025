@@ -112,3 +112,10 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 
 <video height="300px" width=aut src="https://github.com/user-attachments/assets/b8df347b-4307-4336-8812-39d15c8f57af"></video>
 
+### [Zadanie 9 - Chatbot]
+
+❌ 3.0 należy stworzyć po stronie serwerowej osobny serwis do łącznia z chatbotem do usługi chat
+❌ 3.5 należy stworzyć interfejs frontowy dla użytkownika, który komunikuje się z serwisem; odpowiedzi powinny być wysyłane do frontendowego interfejsu
+❌ 4.0 stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy
+❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota
+❌ 5.0 filtrowanie odpowiedzi po sentymencie
