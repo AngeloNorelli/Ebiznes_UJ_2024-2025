@@ -1,6 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
 import "../styles/Chatbot.css";
 
+const greetingMessages = [
+  "Hello! How can I assist you today?",
+  "Hi there! What can I help you with?",
+  "Greetings! How may I be of service?",
+  "Welcome! What do you need assistance with?",
+  "Hey! How can I help you today?",
+];
+
+const farewellsMessages = [
+  "Goodbye! Have a great day!",
+  "See you later! Take care!",
+  "Farewell! Wishing you all the best!",
+  "Until next time! Stay safe!",
+  "Bye! Hope to chat again soon!",
+];
+
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -9,6 +25,20 @@ const Chatbot = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
+
+  const handleOpen = () => {
+    setOpen(true);
+    if (messages.length === 0 ) {
+      const greeting = greetingMessages[Math.floor(Math.random() * greetingMessages.length)];
+      setMessages([{ from: "bot", text: greeting }]);
+    }
+  }
+
+  const handleClose = () => {
+    const farewell = farewellsMessages[Math.floor(Math.random() * farewellsMessages.length)];
+    setMessages((msgs) => [...msgs, { from: "bot", text: farewell }]);
+    setTimeout(() => setOpen(false), 1000);
+  }
 
   useEffect(() => {
     if (open && messagesEndRef.current) {
@@ -40,14 +70,14 @@ const Chatbot = () => {
 
   return (
     <>
-      <div className="chatbot-bubble" onClick={() => setOpen((o) => !o)}>
+      <div className="chatbot-bubble" onClick={handleOpen}>
         💬
       </div>
       {open && (
         <div className="chatbot-window">
           <div className="chatbot-header">
             <h2>Chatbot</h2>
-            <button onClick={() => setOpen(false)}>✕</button>
+            <button onClick={handleClose}>✕</button>
           </div>
           <div className="chatbot-messages">
             {messages.map((msg, i) => (
