@@ -5,6 +5,7 @@ import Payment from './components/Payment';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import Register from './components/Register';
+import Chatbot from './components/Chatbot';
 import { CartProvider } from './components/CartContext';
 import { useEffect, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
@@ -102,6 +103,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Chatbot />
     </CartProvider>
   );
 }
