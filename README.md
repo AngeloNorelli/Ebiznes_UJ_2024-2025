@@ -116,6 +116,6 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 
 ✅ 3.0 [należy stworzyć po stronie serwerowej osobny serwis do łącznia z chatbotem do usługi chat](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/03ee9822e9b45977114bfcd02d2d63923e12dc71)
 ✅ 3.5 [należy stworzyć interfejs frontowy dla użytkownika, który komunikuje się z serwisem; odpowiedzi powinny być wysyłane do frontendowego interfejsu](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/dc323960443cd773d55b6b7fd2197246dade0801)
-❌ 4.0 stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy
+✅ 4.0 [stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/723b208e4221a1d22ca177776474c8e2e1238303)
 ❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota
 ❌ 5.0 filtrowanie odpowiedzi po sentymencie
