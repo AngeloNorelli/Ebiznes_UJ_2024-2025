@@ -59,5 +59,7 @@ func main() {
 	e.GET("/auth/github/login", handlers.GithubLogin)
 	e.GET("/auth/github/callback", handlers.GithubCallback)
 
+	e.POST("/chat", handlers.ChatWithLlama)
+
 	e.Logger.Fatal(e.Start(":8080"))
 }
