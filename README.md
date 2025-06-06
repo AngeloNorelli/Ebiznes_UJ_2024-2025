@@ -119,3 +119,11 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 ✅ 4.0 [stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/723b208e4221a1d22ca177776474c8e2e1238303)
 ❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota
 ❌ 5.0 filtrowanie odpowiedzi po sentymencie
+
+### [Zadanie 10 - Chmura/CI]
+
+❌ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 3.5 [Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 4.5 [Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+❌ 5.0 [Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
