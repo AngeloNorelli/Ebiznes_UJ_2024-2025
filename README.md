@@ -120,9 +120,9 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 ❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota
 ❌ 5.0 filtrowanie odpowiedzi po sentymencie
 
-### [Zadanie 10 - Chmura/CI]
+### [Zadanie 10 - Chmura/CI](http://152.70.42.33:3000/)
 
-❌ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+✅ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/500d442b70e16689c089660e18d9b84e3d30de84) - [poprawki w kodzie umożliwiająe działanie w chmurze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7da24e0bd9bc0c8657415811a5fd4691d993a218)
 ❌ 3.5 [Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
 ❌ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
 ❌ 4.5 [Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
