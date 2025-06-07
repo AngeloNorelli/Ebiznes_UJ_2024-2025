@@ -124,6 +124,6 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 
 ✅ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/500d442b70e16689c089660e18d9b84e3d30de84) - [poprawki w kodzie umożliwiająe działanie w chmurze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7da24e0bd9bc0c8657415811a5fd4691d993a218)
 ✅ 3.5 [Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/1083fbe26d60b39e261399361229a2e8d0683018)
-❌ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+✅ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/cc886db8fd13d100c13fe725f1e1dbf68d87d160)
 ❌ 4.5 [Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
 ❌ 5.0 [Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
