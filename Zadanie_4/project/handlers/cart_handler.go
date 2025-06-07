@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-const noCartError = "Cart not found"
+const noCartError = "Cart not found in database"
 
 func CreateCart(c echo.Context) error {
 	cart := new(models.Cart)
