@@ -36,6 +36,8 @@ function App() {
     }
   }, []);
 
+  const endpoint = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
   return (
     <CartProvider>
       <Router>
@@ -70,14 +72,14 @@ function App() {
                   <div className="login-methods">
                     <button
                       className="google-login-btn"
-                      onClick={() => window.location.href = "http://localhost:8080/auth/google/login"}
+                      onClick={() => window.location.href = `${endpoint}/auth/google/login`}
                       title='Log in with Google'
                     >
                       <FcGoogle size={24}/>
                     </button>
                     <button
                       className="github-login-btn"
-                      onClick={() => window.location.href = "http://localhost:8080/auth/github/login"}
+                      onClick={() => window.location.href = `${endpoint}/auth/github/login`}
                       title='Log in with Github'
                     >
                       <FaGithub size={24}/>

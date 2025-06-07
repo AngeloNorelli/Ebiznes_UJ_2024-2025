@@ -19,7 +19,7 @@ const Payment = () => {
     const token = localStorage.getItem("token");
 
     axios.post(
-      "http://localhost:8080/payments",
+      `${process.env.REACT_APP_API_URL}/payments`,
       paymentPayload,
       {
         headers: token ? {

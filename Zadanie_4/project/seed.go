@@ -9,6 +9,12 @@ import (
 func main() {
     database.InitDatabase()
     db := database.GetDB()
+		db.Exec("DELETE FROM products")
+		db.Exec("DELETE FROM categories")
+		db.Exec("DELETE FROM users")
+		db.Exec("DELETE FROM payments")
+		db.Exec("DELETE FROM carts")
+		db.Exec("DELETE FROM cart_items")
 
     electronics := models.Category{Name: "Electronics"}
     books := models.Category{Name: "Books"}

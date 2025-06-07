@@ -8,7 +8,7 @@ const Products = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/products')
+    axios.get(`${process.env.REACT_APP_API_URL}/products`)
       .then((response) => setProducts(response.data))
       .catch((error) => console.error('Error fetching products:', error));
   }, []);

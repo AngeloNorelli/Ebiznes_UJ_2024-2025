@@ -32,7 +32,7 @@ func ChatWithLlama(c echo.Context) error {
 		Prompt: req.Message,
 	}
 	body, _ := json.Marshal(ollamaReq)
-	resp, err := http.Post("http://localhost:11434/api/generate", "application/json", bytes.NewBuffer(body))
+	resp, err := http.Post("http://ollama:11434/api/generate", "application/json", bytes.NewBuffer(body))
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to communicate with Ollama API"})
 	}

@@ -11,8 +11,6 @@ import (
 	"gorm.io/gorm"
 )
 
-var jwtSecret = []byte(os.Getenv("JWT_SECRET_KEY"))
-
 type LoginRequest struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
@@ -39,6 +37,7 @@ func Login(db *gorm.DB) echo.HandlerFunc {
 			return c.JSON(http.StatusUnauthorized, map[string]string{"message": "Invalid credentials"})
 		}
 
+		jwtSecret := []byte(os.Getenv("JWT_SECRET_KEY"))
 		token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 			"user_id": 	user.ID,
 			"username": user.Username,
