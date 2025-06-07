@@ -1,0 +1,29 @@
+services:
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 5 && ollama pull llama3"]
+
+  backend:
+    build: ./Zadanie_4/project
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+    volumes:
+      - ./Zadanie_4/project/products.db:/app/products.db
+    depends_on:
+      - ollama
+  
+  frontend:
+    build: ./Zadanie_5/react-app
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  ollama_data:
