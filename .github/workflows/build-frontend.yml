@@ -68,4 +68,4 @@ jobs:
           username: ${{ secrets.CLOUD_SERVER_USERNAME }}
           key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
           script: |
-            docker compose up --build -d
+            docker-compose up --build -d
