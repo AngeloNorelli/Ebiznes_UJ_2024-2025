@@ -1,12 +1,29 @@
 name: Build Backend
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      JWT_SECRET_KEY:
+        required: true
+      GOOGLE_CLIENT_ID:
+        required: true
+      GOOGLE_CLIENT_SECRET:
+        required: true
+      GB_CLIENT_ID:
+        required: true
+      GB_CLIENT_SECRET:
+        required: true
+      EMAIL_USERNAME:
+        required: true
+      EMAIL_PASSWORD:
+        required: true
+      CLOUD_SERVER_HOST:
+        required: true
+      CLOUD_SERVER_USERNAME:
+        required: true
+      CLOUD_SERVER_SSH_KEY:
+        required: true
+
 jobs:
   build-backend:
     runs-on: ubuntu-latest
@@ -52,24 +69,16 @@ jobs:
           to: angelo.norelli@student.uj.edu.pl
           from: ${{ secrets.EMAIL_USERNAME }}
           body: "The backend Docker image has been built successfully."
-      
-      - name: Deploy backend to cloud server
-        if: success()
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.CLOUD_SERVER_HOST }}
-          username: ${{ secrets.CLOUD_SERVER_USERNAME }}
-          key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
-          source: "./Zadanie_4/project"
-          target: "~"
-      
-      - name: Restart app on server
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.CLOUD_SERVER_HOST }}
-          username: ${{ secrets.CLOUD_SERVER_USERNAME }}
-          key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
-          script: |
-            docker-compose up --build -d
-          command_timeout: 90m
-          timeout: 5m
+
+      - name: Prepare SSH key
+        if: steps.changes.outputs.backend == 'true'
+        run: |
+          echo "${{ secrets.CLOUD_SERVER_SSH_KEY }}" > ssh-key-2025-06-07.key
+          chmod 400 ssh-key-2025-06-07.key
+
+      - name: Deploy backend to cloud server (rsync)
+        if: steps.changes.outputs.backend == 'true'
+        run: |
+          rsync -avz -e "ssh -i ssh-key-2025-06-07.key -o StrictHostKeyChecking=no" \
+            Zadanie_4/project docker-compose.yml \
+            ${{ secrets.CLOUD_SERVER_USERNAME }}@${{ secrets.CLOUD_SERVER_HOST }}:~

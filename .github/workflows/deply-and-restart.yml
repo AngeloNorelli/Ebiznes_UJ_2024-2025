@@ -1,0 +1,50 @@
+name: Deploy and Restart Server
+
+on:
+  push:
+    branches: [main]
+  
+  pull_request:
+    branches: [main]
+
+jobs:
+  call-backend:
+    uses: ./.github/workflows/build-backend.yml
+    secrets:
+      JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      GB_CLIENT_ID: ${{ secrets.GB_CLIENT_ID }}
+      GB_CLIENT_SECRET: ${{ secrets.GB_CLIENT_SECRET }}
+      EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      CLOUD_SERVER_HOST: ${{ secrets.CLOUD_SERVER_HOST }}
+      CLOUD_SERVER_USERNAME: ${{ secrets.CLOUD_SERVER_USERNAME }}
+      CLOUD_SERVER_SSH_KEY: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
+
+  call-frontend:
+    uses: ./.github/workflows/build-frontend.yml
+    secrets:
+      REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+      EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      CLOUD_SERVER_HOST: ${{ secrets.CLOUD_SERVER_HOST }}
+      CLOUD_SERVER_USERNAME: ${{ secrets.CLOUD_SERVER_USERNAME }}
+      CLOUD_SERVER_SSH_KEY: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
+
+  restart:
+    needs: [call-backend, call-frontend]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restart app on server
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.CLOUD_SERVER_HOST }}
+          username: ${{ secrets.CLOUD_SERVER_USERNAME }}
+          key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
+          script: |
+            docker-compose down
+            docker system prune -af
+            docker-compose up --build -d
+          command_timeout: 90m
+          timeout: 5m
