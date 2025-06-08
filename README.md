@@ -120,6 +120,8 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 ❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota<br>
 ❌ 5.0 filtrowanie odpowiedzi po sentymencie<br>
 
+<video height="300px" width=aut src="https://github.com/user-attachments/assets/a0b9d241-b182-49eb-a8dd-6d40c0a26416"></video>
+
 ### [Zadanie 10 - Chmura/CI](http://152.70.42.33:3000/)
 
 > Z góry przepraszam, ale dużo poprawek zrobiłem by zobaczyć czy działa i okazało się, że głównym problemem była zła nazwa katalogu z workflows
