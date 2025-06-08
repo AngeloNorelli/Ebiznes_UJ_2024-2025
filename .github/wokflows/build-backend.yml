@@ -44,3 +44,22 @@ jobs:
           to: angelo.norelli@student.uj.edu.pl
           from: ${{ secrets.EMAIL_USERNAME }}
           body: "The backend Docker image has been built successfully."
+      
+      - name: Deploy backend to cloud server
+        if: success()
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.CLOUD_SERVER_HOST }}
+          username: ${{ secrets.CLOUD_SERVER_USERNAME }}
+          key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
+          source: "./Zadanie_4/project"
+          target: "~"
+      
+      - name: Restart app on server
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.CLOUD_SERVER_HOST }}
+          username: ${{ secrets.CLOUD_SERVER_USERNAME }}
+          key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
+          script: |
+            docker compose up --build -d
