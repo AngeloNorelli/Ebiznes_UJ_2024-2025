@@ -85,45 +85,45 @@ Testy mają w sumie zawierać minimum 50 asercji (3.5). Mają również
 uruchamiać się na platformie Browserstack (5.0). Proszę pamiętać o
 stworzeniu darmowego konta via https://education.github.com/pack.
 
-✅ 3.0 [Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/8d7d28015f7ddc0cdc316f1b0c87c317c85690d6)
-❌ 3.5 [Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 4.0 [Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 4.5 [Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
-❌ 5.0 [Należy uruchomić testy funkcjonalne na Browserstacku](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+✅ 3.0 [Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/8d7d28015f7ddc0cdc316f1b0c87c317c85690d6)<br>
+❌ 3.5 [Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+❌ 4.0 [Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+❌ 4.5 [Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+❌ 5.0 [Należy uruchomić testy funkcjonalne na Browserstacku](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
 
 * [Kod](./Zadanie_4/project/cypress)
 <video height="300px" width=aut src="https://github.com/user-attachments/assets/8fdb09f4-4c17-4aff-abec-f8d330f8e092"></video>
 
 ### [Zadanie 7 - Sonar]
 
-✅ 3.0 [Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/48a95a65fb6d4fcfa6ca7fceb0f94a6b52d02ce6)
-✅ 3.5 [Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
-✅ 4.0 [Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
-✅ 4.5 [Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)
-✅ 5.0 [Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckie](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/725ff62483c679cd20678c7287b2f6bd944e20f1)
+✅ 3.0 [Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/48a95a65fb6d4fcfa6ca7fceb0f94a6b52d02ce6)<br>
+✅ 3.5 [Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)<br>
+✅ 4.0 [Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)<br>
+✅ 4.5 [Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7a7656739056e6cd51fa87c33abc4988a741d63c)<br>
+✅ 5.0 [Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckie](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/725ff62483c679cd20678c7287b2f6bd944e20f1)<br>
 
 ### [Zadanie 8 - Oauth2]
 
-✅ 3.0 [logowanie przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/ab0bd29e9b0b851e186d27ad7dade6c3647083ee)
-✅ 3.5 [rejestracja przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/576f703818607e223809e01a0dbdbcda25d08e5b)
+✅ 3.0 [logowanie przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/ab0bd29e9b0b851e186d27ad7dade6c3647083ee)<br>
+✅ 3.5 [rejestracja przez aplikację serwerową (bez Oauth2)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/576f703818607e223809e01a0dbdbcda25d08e5b)<br>
 ✅ 4.0 [logowanie via Google OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/520a90d5587f54e6a3d3828c289d0f74585d2e60)
-✅ 4.5 [logowanie via Facebook lub Github OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)
-❓ 5.0 zapisywanie danych logowania OAuth2 po stronie serwera - [Oauth Google](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/520a90d5587f54e6a3d3828c289d0f74585d2e60) i [OAuth Github](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)
+✅ 4.5 [logowanie via Facebook lub Github OAuth2](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)<br>
+❓ 5.0 zapisywanie danych logowania OAuth2 po stronie serwera - [Oauth Google](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/520a90d5587f54e6a3d3828c289d0f74585d2e60) i [OAuth Github](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/d1fadf9e5d117fb73e1164fa74c1601241920c0c)<br>
 
 <video height="300px" width=aut src="https://github.com/user-attachments/assets/b8df347b-4307-4336-8812-39d15c8f57af"></video>
 
 ### [Zadanie 9 - Chatbot]
 
-✅ 3.0 [należy stworzyć po stronie serwerowej osobny serwis do łącznia z chatbotem do usługi chat](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/03ee9822e9b45977114bfcd02d2d63923e12dc71)
-✅ 3.5 [należy stworzyć interfejs frontowy dla użytkownika, który komunikuje się z serwisem; odpowiedzi powinny być wysyłane do frontendowego interfejsu](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/dc323960443cd773d55b6b7fd2197246dade0801)
-✅ 4.0 [stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/723b208e4221a1d22ca177776474c8e2e1238303)
-❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota
-❌ 5.0 filtrowanie odpowiedzi po sentymencie
+✅ 3.0 [należy stworzyć po stronie serwerowej osobny serwis do łącznia z chatbotem do usługi chat](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/03ee9822e9b45977114bfcd02d2d63923e12dc71)<br>
+✅ 3.5 [należy stworzyć interfejs frontowy dla użytkownika, który komunikuje się z serwisem; odpowiedzi powinny być wysyłane do frontendowego interfejsu](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/dc323960443cd773d55b6b7fd2197246dade0801)<br>
+✅ 4.0 [stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/723b208e4221a1d22ca177776474c8e2e1238303)<br>
+❌ 4.5 filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do chatbota<br>
+❌ 5.0 filtrowanie odpowiedzi po sentymencie<br>
 
 ### [Zadanie 10 - Chmura/CI](http://152.70.42.33:3000/)
 
-✅ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/500d442b70e16689c089660e18d9b84e3d30de84) - [poprawki w kodzie umożliwiająe działanie w chmurze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7da24e0bd9bc0c8657415811a5fd4691d993a218)
-✅ 3.5 [Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/726578a77d91baeafd07ac1fe631d3aafbf73500)
-✅ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2f67e453b47fbf4ddf084e2849441b63747de044)
-✅ 4.5 [Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/cc1e184b209f28178a6cac7e563cd6124d1b14b3)
-❌ 5.0 [Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)
+✅ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/500d442b70e16689c089660e18d9b84e3d30de84) - [poprawki w kodzie umożliwiająe działanie w chmurze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7da24e0bd9bc0c8657415811a5fd4691d993a218)<br>
+✅ 3.5 [Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/726578a77d91baeafd07ac1fe631d3aafbf73500)<br>
+✅ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2f67e453b47fbf4ddf084e2849441b63747de044)<br>
+✅ 4.5 [Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/cc1e184b209f28178a6cac7e563cd6124d1b14b3)<br>
+❌ 5.0 [Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
