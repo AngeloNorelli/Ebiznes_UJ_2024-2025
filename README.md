@@ -131,6 +131,7 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 > poprawki z tym związane:<br>
 > [niepotrzebne linijki](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/6b4ba4512ac5b6136974438fcf8dc390c1b30144) oraz
 > [wczytywanie secretów zawartych w .env](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/de8e43bbbd35c3b00dbc4f44483900506e00603b)
+> [uruchamianie workflow przez jeden workflow i dopiero po zakończeniu buildów deploy](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2efff86fd74df4ba9eb9d455e5637f7f02cf9d4b)
 
 ✅ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2f67e453b47fbf4ddf084e2849441b63747de044)<br>
 > poprawki z tym związane:<br>
@@ -142,4 +143,4 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 Dowody, że działa:
 * link do apki na [chmurze](http://152.70.42.33:3000/) <-
 * screen maila z workflow: ![screen maila](mail.png)
-* link do [workflow](https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/actions/runs/15517599033/job/43686571346) - nie przechodzi workflow, ale to wynika z czasu jaki potrzebuje chmura na wykonanie docker-compose
+* link do [workflow](https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/actions/runs/15522552876/job/43697762804)
