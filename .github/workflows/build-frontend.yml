@@ -23,6 +23,11 @@ jobs:
             frontend:
               - 'Zadanie_5/**'
               - '.github/workflows/frontend-backend.yml'
+      
+      - name: Create .env file for frontend
+        if: steps.changes.outputs.frontend == 'true'
+        run: |
+          echo "REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}" >> Zadanie_5/react-app/.env
 
       - name: Set up Docker Buildx
         if: steps.changes.outputs.frontend == 'true'

@@ -22,6 +22,15 @@ jobs:
             backend:
               - 'Zadanie_4/**'
               - '.github/workflows/build-backend.yml'
+      
+      - name: Create .env file for backend
+        if: steps.changes.outputs.backend == 'true'
+        run: |
+          echo "JWT_SECRET_KEY=${{ secrets.JWT_SECRET_KEY }}" >> Zadanie_4/project/.env
+          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> Zadanie_4/project/.env
+          echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> Zadanie_4/project/.env
+          echo "GITHUB_CLIENT_ID=${{ secrets.GB_CLIENT_ID }}" >> Zadanie_4/project/.env
+          echo "GITHUB_CLIENT_SECRET=${{ secrets.GB_CLIENT_SECRET }}" >> Zadanie_4/project/.env
 
       - name: Set up Docker Buildx
         if: steps.changes.outputs.backend == 'true'
