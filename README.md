@@ -122,8 +122,22 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 
 ### [Zadanie 10 - Chmura/CI](http://152.70.42.33:3000/)
 
+> Z góry przepraszam, ale dużo poprawek zrobiłem by zobaczyć czy działa i okazało się, że głównym problemem była zła nazwa katalogu z workflows
+
 ✅ 3.0 [Należy stworzyć odpowiednie instancje po stronie chmury na dockerze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/500d442b70e16689c089660e18d9b84e3d30de84) - [poprawki w kodzie umożliwiająe działanie w chmurze](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/7da24e0bd9bc0c8657415811a5fd4691d993a218)<br>
 ✅ 3.5 [Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/726578a77d91baeafd07ac1fe631d3aafbf73500)<br>
+> poprawki z tym związane:<br>
+> [niepotrzebne linijki](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/6b4ba4512ac5b6136974438fcf8dc390c1b30144) oraz
+> [wczytywanie secretów zawartych w .env](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/de8e43bbbd35c3b00dbc4f44483900506e00603b)
+
 ✅ 4.0 [Dodać notyfikację mailową o zbudowaniu aplikacji](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/2f67e453b47fbf4ddf084e2849441b63747de044)<br>
+> poprawki z tym związane:<br>
+> [zmiana smpt](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/38474ba1bee29ab3bd0403552a12a710d407c343)<br>
+
 ✅ 4.5 [Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/cc1e184b209f28178a6cac7e563cd6124d1b14b3)<br>
 ❌ 5.0 [Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions](https://github.com/angelonorelli/Ebiznes_UJ_2024-2025/commit/)<br>
+
+Dowody, że działa:
+* link do apki na [chmurze](http://152.70.42.33:3000/) <-
+* screen maila z workflow: ![screen maila](mail.png)
+* link do [workflow](https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/actions/runs/15517599033/job/43686571346) - nie przechodzi workflow, ale to wynika z czasu jaki potrzebuje chmura na wykonanie docker-compose
