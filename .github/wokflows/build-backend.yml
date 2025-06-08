@@ -31,3 +31,16 @@ jobs:
       - name: Build backend Docker image
         if: steps.changes.outputs.backend == 'true'
         run: docker build -t backend ./Zadanie_4/project
+
+      - name: Send notification email
+        if: steps.changes.outputs.backend == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Backend Build Notification
+          to: angelo.norelli@student.uj.edu.pl
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: "The backend Docker image has been built successfully."
