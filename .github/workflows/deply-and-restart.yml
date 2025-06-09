@@ -44,7 +44,6 @@ jobs:
           key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
           script: |
             docker-compose down
-            docker system prune -af
             docker-compose up --build -d
-          command_timeout: 90m
+          command_timeout: 150m
           timeout: 5m
