@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"net/http"
 	"bytes"
 	"encoding/json"
+	"net/http"
 
 	"github.com/labstack/echo/v4"
 )
@@ -13,8 +13,8 @@ type ChatRequest struct {
 }
 
 type OllamaRequest struct {
-	Model   string `json:"model"`
-	Prompt  string `json:"prompt"`
+	Model  string `json:"model"`
+	Prompt string `json:"prompt"`
 }
 
 type OllamaResponse struct {
@@ -36,7 +36,11 @@ func ChatWithLlama(c echo.Context) error {
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "Failed to communicate with Ollama API"})
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			c.Logger().Error("Failed to close response body:", err)
+		}
+	}()
 
 	var ollamaResp OllamaResponse
 	var fullResponse string

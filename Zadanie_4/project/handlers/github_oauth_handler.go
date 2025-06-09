@@ -1,17 +1,18 @@
 package handlers
 
 import (
-	"net/http"
-	"os"
-	"time"
 	"context"
 	"encoding/json"
+	"net/http"
+	"os"
+	"project/database"
+	"project/models"
+	"time"
+
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/github"
-	"project/database"
-	"project/models"
 )
 
 func getGithubOauthConfig() *oauth2.Config {
@@ -43,7 +44,11 @@ func GithubCallback(c echo.Context) error {
 	if err != nil {
 		return c.String(http.StatusInternalServerError, "Failed to get user info: "+err.Error())
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			c.Logger().Error("Failed to close response body:", err)
+		}
+	}()
 
 	var userInfo struct {
 		Login string `json:"login"`
@@ -59,7 +64,7 @@ func GithubCallback(c echo.Context) error {
 	db := database.GetDB()
 	if err := db.Where("username = ?", userInfo.Login).First(&user).Error; err != nil {
 		user = models.User{
-			Username: 		userInfo.Login,
+			Username:     userInfo.Login,
 			PasswordHash: "",
 		}
 		if err := db.Create(&user).Error; err != nil {

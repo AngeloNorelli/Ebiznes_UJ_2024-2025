@@ -1,26 +1,27 @@
 package handlers
 
 import (
+	"context"
+	"encoding/json"
 	"net/http"
 	"os"
-	"time"
-	"encoding/json"
-	"context"
-	"github.com/labstack/echo/v4"
-	"github.com/golang-jwt/jwt/v5"
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google"
 	"project/database"
 	"project/models"
+	"time"
+
+	"github.com/golang-jwt/jwt/v5"
+	"github.com/labstack/echo/v4"
+	"golang.org/x/oauth2"
+	"golang.org/x/oauth2/google"
 )
 
 func getGoogleOauthConfig() *oauth2.Config {
 	return &oauth2.Config{
-		ClientID:		 	os.Getenv("GOOGLE_CLIENT_ID"),
-		ClientSecret:	os.Getenv("GOOGLE_CLIENT_SECRET"),
-		RedirectURL:	"http://localhost:8080/auth/google/callback",
-		Scopes:			 	[]string{"https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"},
-		Endpoint:		 	google.Endpoint,
+		ClientID:     os.Getenv("GOOGLE_CLIENT_ID"),
+		ClientSecret: os.Getenv("GOOGLE_CLIENT_SECRET"),
+		RedirectURL:  "http://localhost:8080/auth/google/callback",
+		Scopes:       []string{"https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"},
+		Endpoint:     google.Endpoint,
 	}
 }
 
@@ -43,12 +44,16 @@ func GoogleCallback(c echo.Context) error {
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"message": "Failed to get user info"})
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			c.Logger().Error("Failed to close response body:", err)
+		}
+	}()
 
 	var userInfo struct {
 		Email string `json:"email"`
 		Name  string `json:"name"`
-		Id		string `json:"id"`
+		Id    string `json:"id"`
 	}
 	if err := json.NewDecoder(resp.Body).Decode(&userInfo); err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"message": "Failed to decode user info"})
@@ -58,7 +63,7 @@ func GoogleCallback(c echo.Context) error {
 	db := database.GetDB()
 	if err := db.Where("username = ?", userInfo.Name).First(&user).Error; err != nil {
 		user = models.User{
-			Username: userInfo.Name,
+			Username:     userInfo.Name,
 			PasswordHash: "",
 		}
 		if err := db.Create(&user).Error; err != nil {

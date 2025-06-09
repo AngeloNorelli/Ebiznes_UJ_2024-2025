@@ -5,7 +5,7 @@ RUN apk add --no-cache gcc musl-dev
 COPY . .
 RUN go mod download
 RUN go build -o server main.go
-RUN go build -o seed seed.go
+RUN go build -o seed seed_generator/seed.go
 
 FROM alpine:3.19
 WORKDIR /app
