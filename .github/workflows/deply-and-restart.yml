@@ -36,14 +36,14 @@ jobs:
     needs: [call-backend, call-frontend]
     runs-on: ubuntu-latest
     steps:
+      - name: Prepare SSH key
+        run: |
+          echo "${{ secrets.CLOUD_SERVER_SSH_KEY }}" > ssh-key-2025-06-07.key
+          chmod 400 ssh-key-2025-06-07.key
+      
       - name: Restart app on server
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.CLOUD_SERVER_HOST }}
-          username: ${{ secrets.CLOUD_SERVER_USERNAME }}
-          key: ${{ secrets.CLOUD_SERVER_SSH_KEY }}
-          script: |
+        run: |
+          ssh -i ssh-key-2025-06-07.key -o StrictHostKeyChecking=no ${{ secrets.CLOUD_SERVER_USERNAME }}@${{ secrets.CLOUD_SERVER_HOST }} '
             docker-compose down
             docker-compose up --build -d
-          command_timeout: 150m
-          timeout: 5m
+          '
