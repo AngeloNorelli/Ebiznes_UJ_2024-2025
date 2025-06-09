@@ -79,6 +79,6 @@ jobs:
       - name: Deploy backend to cloud server (rsync)
         if: steps.changes.outputs.backend == 'true'
         run: |
-          rsync -avz -e "ssh -i ssh-key-2025-06-07.key -o StrictHostKeyChecking=no" \
+          rsync -avz --relative -e "ssh -i ssh-key-2025-06-07.key -o StrictHostKeyChecking=no" \
             Zadanie_4/project docker-compose.yml \
             ${{ secrets.CLOUD_SERVER_USERNAME }}@${{ secrets.CLOUD_SERVER_HOST }}:~
