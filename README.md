@@ -143,4 +143,5 @@ stworzeniu darmowego konta via https://education.github.com/pack.
 Dowody, że działa:
 * link do apki na [chmurze](http://152.70.42.33:3000/) <-
 * screen maila z workflow: ![screen maila](mail.png)
-* link do [workflow](https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/actions/runs/15522552876/job/43697762804)
+* link do [workflow](https://github.com/AngeloNorelli/Ebiznes_UJ_2024-2025/actions/runs/15544124098)
+> chatbot nie będzie działać, bo na to instancja chmury nie pozwala

@@ -24,7 +24,7 @@ type OllamaResponse struct {
 func ChatWithLlama(c echo.Context) error {
 	var req ChatRequest
 	if err := c.Bind(&req); err != nil {
-		return c.JSON(http.StatusBadRequest, map[string]string{"error": "Invalid request format"})
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "Invalid request"})
 	}
 
 	ollamaReq := OllamaRequest{
